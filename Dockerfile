@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         --without-ipmi \
         --without-doc \
         --without-man \
+        --without-ssl \
     && make -j$(nproc) && make install \
     && mkdir -p /var/run/nut /etc/nut \
     && apt-get purge -y build-essential autoconf automake libtool python3 \
